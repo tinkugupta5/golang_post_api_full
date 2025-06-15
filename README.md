@@ -96,6 +96,59 @@ Server will run at: `http://localhost:8080`
 
 ---
 
+# 📘 Database Configuration PostgreSQL
+
+# 🛠 STEP 1: Create PostgreSQL Database (`postdb`)
+
+This step explains how to create the PostgreSQL database required by the Go CRUD API project.
+
+---
+
+## ✅ Option 1: Using `psql` Command Line
+
+If you have PostgreSQL and `psql` CLI installed, follow these steps:
+
+1. Open a terminal and run:
+
+```bash
+psql -U postgres
+```
+
+> Replace `postgres` with your PostgreSQL username if it's different. You’ll be prompted to enter your password (default might be `postgres`).
+
+2. Inside the PostgreSQL shell, run:
+
+```sql
+CREATE DATABASE postdb;
+```
+
+3. Exit the shell:
+
+```sql
+\q
+```
+
+---
+
+## ✅ Option 2: Using pgAdmin (GUI)
+
+If you prefer a graphical interface:
+
+1. **Open pgAdmin 4** (installed along with PostgreSQL).
+2. Login with your PostgreSQL credentials.
+3. In the left panel:
+   - Expand `Servers → PostgreSQL → Databases`
+4. Right-click on **Databases** → Click **Create → Database**.
+5. **Name** the database: `postdb`
+6. Leave other settings as default and click **Save**.
+
+---
+
+Once the database is created, your application will be able to connect to it as long as your `.env` file is correctly configured.
+
+
+
+
 ## 📫 Author
 
 **Tinku Gupta**
